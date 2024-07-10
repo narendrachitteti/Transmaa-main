@@ -1,0 +1,191 @@
+.first-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px;
+  font-family: "Roboto", sans-serif;
+}
+.second-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px;
+  font-family: "Roboto", sans-serif;
+}
+.card-service {
+  width: 21rem;
+  height: 30rem;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 4%;
+  color: rgb(240, 240, 240);
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  h2 {
+    padding-bottom: 5px;
+    color: #fff;
+    border-bottom: 2px rgb(213, 75, 25) solid;
+  }
+}
+.card-service img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: rgb(231, 110, 12);
+  opacity: 0.9;
+  transition: opacity 0.2s ease-out;
+  margin-bottom: 2em;
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card-service:hover .card-overlay {
+  opacity: 1;
+}
+.card-service h2 {
+  position: absolute;
+  inset: auto auto 10px 10px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.card-service p,
+.card-service a {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.3s ease-out;
+}
+.card-service p {
+  inset: auto auto 50px 10px;
+}
+.card-service a {
+  inset: auto auto 20px 10px;
+  color: inherit;
+  text-decoration: none;
+}
+.card-service:hover h2 {
+  inset: auto auto 430px 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: inset 0.3s ease-out;
+}
+.card-service:hover p,
+.card-service:hover a {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+.card-service:hover img {
+  transition: opacity 0.3s ease-in;
+  opacity: 1;
+  filter: blur(40px);
+}
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+.arrow {
+  margin-top: -4px;
+  margin-left: 5px;
+}
+@media (max-width: 800px) {
+  .first-row,
+  .second-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+  }
+  .card-service {
+    width: calc(50% - 20px);
+    margin-bottom: 1rem;
+    margin-right: 3%;
+  }
+}
+@media (max-width: 500px) {
+  .first-row,
+  .second-row {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-service {
+    width: calc(90% - 20px);
+    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    p {
+      font-size: smaller;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .first-row,
+  .second-row {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-service {
+    width: calc(100% - 20px);
+    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    p {
+      font-size: smaller;
+    }
+  }
+}
+.card-service .card-content {
+  .button {
+    background-color: #fff0;
+    padding: 5px;
+    width: 7.2em;
+    height: 2.2em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+  }
+  .button p {
+    position: absolute;
+    top: 0.4em;
+    left: 1.2em;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+    color: #fff;
+  }
+  .button svg {
+    position: absolute;
+    top: 0.65em;
+    right: 0.3em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    fill: #fff;
+  }
+  .button:hover p {
+    left: 0.6em;
+    color: #fff;
+  }
+  .button:hover svg {
+    opacity: 1;
+  }
+  .button:hover {
+    background-color: rgb(198, 77, 34);
+  }
+}

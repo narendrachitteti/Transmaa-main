@@ -1,0 +1,277 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap);
+.container-nav {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
+  background-color: #121420;
+  .logo img {
+    margin-top: -10px;
+    width: 180px;
+    height: auto;
+  }
+}
+.navbar-navone {
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+.menu-icon {
+  display: none;
+}
+.nav-elements ul {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.nav-elements ul li:not(:last-child) {
+  margin-right: 60px;
+}
+.nav-elements ul {
+  display: flex;
+  align-items: center;
+}
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2f234f;
+  text-decoration: none;
+}
+.nav-elements ul a.active {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+}
+.nav-elements ul a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
+}
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #fff;
+    width: 0;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+  .nav-elements.active {
+    width: 270px;
+  }
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+}
+a {
+  text-decoration: none !important;
+}
+.Trbutton {
+  border: none;
+  color: #fff;
+  background-color: #121420;
+}
+.Trbutton {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  background-color: #121420;
+  color: #f5f5f5;
+}
+.Trbutton:hover {
+  box-shadow: 0 0 20px 0 #2e2e2e3a;
+}
+.Trbutton .icon {
+  position: absolute;
+  height: 40px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.Trbutton .text {
+  transform: translateX(55px);
+}
+.Trbutton:hover .icon {
+  width: 175px;
+}
+.Trbutton:hover .text {
+  transition: all 0.5s;
+  opacity: 0;
+}
+.Trbutton:focus {
+  outline: none;
+}
+.Trbutton:active .icon {
+  transform: scale(0.85);
+}
+.Trdropdown {
+  position: relative;
+  display: inline-block;
+}
+.Trbutton-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    overflow: hidden;
+    background-color: #000;
+    color: ghostwhite;
+    width: 12rem;
+    padding: 1rem;
+  }
+  button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+  }
+  button:hover span {
+    color: #fff;
+  }
+  button::before,
+  button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  button::before {
+    content: "";
+    background-color: #d2d1d1;
+    color: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transform: scale(1.1);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  button:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.Trcgprogile {
+  font-size: xx-large;
+  color: #fff;
+  border: none;
+  background-color: #121420;
+  margin-top: -10px;
+}
+.Trcgprogile-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    overflow: hidden;
+    background-color: #000;
+    color: ghostwhite;
+    width: 12rem;
+    padding: 1rem;
+  }
+  button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+  }
+  button:hover span {
+    color: #fff;
+  }
+  button::before,
+  button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  button::before {
+    content: "";
+    background-color: #d2d1d1;
+    color: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  button:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.Trdropdown:hover .Trbutton-dropdown,
+.Trdropdown:hover .Trcgprogile-dropdown,
+.Trdropdown:hover .Trbutton-dropdown button,
+.Trdropdown:hover .Trcgprogile-dropdown button {
+  display: block;
+  min-width: fit-content;
+  a {
+    text-decoration: none !important;
+  }
+}
+.Mainlogo img {
+  width: 200px;
+  height: auto;
+}
